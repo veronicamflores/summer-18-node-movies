@@ -16,7 +16,7 @@ server.use(bp.urlencoded({
 //create an endpoint for finding a movie by its index
 
 //create an endpoint for finding a movie by its title
-server.get('/movies/:title', (req, res, next) => {
+server.get('/movies/title/:title', (req, res, next) => {
   let movie = movies.find(m => m.name == req.params.title)
   if (movie) {
     return res.send(movie)
